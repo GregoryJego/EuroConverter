@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+/*** 1) GENERAL RULES ***/
+body{
+    font-family: 'Roboto', sans-serif;
+    color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding:0rem .5rem;
+    width:140px;
+    height:30px;
+    border:none;
+    outline: none;
+    margin-top:10px;
+    color:#303030;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+select{
+    height:30px;
+    margin-top:10px;
+    color:#303030;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.wrapper {
+    width:1024px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    }
+
+/*** 2) LOADER ***/
+
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-top:1rem;
+    margin-bottom: 1rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*** 3) HEADER ***/
+
+.header{
+    width:100%;
+    height:20vh;
+    background-color: #242729;
+    font-size: 25px;
+    font-weight: bold;
 }
+
+/*** 4) CONTENT ***/
+
+.container{
+    width:100%;
+    height: 70vh;
+    font-size: 16px;
+    background-color: #4E609E;
+}
+
+.line{
+    display:flex;
+align-items: flex-end;
+justify-content: space-between;
+width:80%;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+}
+
+.info-right{
+    display:flex;
+    flex: 3; 
+    justify-content: space-between;
+}
+
+/*** 5) FOOTER ***/
+
+.footer{
+    background-color: #303030;
+    height:10vh;
+    font-size:14px;
+}
+
